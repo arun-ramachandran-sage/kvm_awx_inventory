@@ -2,3 +2,16 @@
 plugin: community.general.nmap
 strict: false
 address: 10.226.17.0/23
+
+# a sudo nmap scan to fully use nmap scan power.
+plugin: community.general.nmap
+sudo: true
+strict: false
+address: 10.226.17.0/23
+
+# an nmap scan specifying ports and classifying results to an inventory group
+plugin: community.general.nmap
+address: 10.226.17.0/23
+port: 22, 443
+groups:
+  web_servers: "ports | selectattr('port', 'equalto', '443')"
