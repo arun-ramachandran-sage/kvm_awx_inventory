@@ -1,0 +1,4 @@
+# inventory.config file in YAML format
+plugin: community.general.nmap
+strict: false
+address: 10.226.17.0/23
